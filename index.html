@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>sold - 中古相場の収集ボット</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 44rem; margin: 3rem auto; padding: 0 1.25rem;
+         font: 16px/1.75 system-ui, sans-serif; }
+  h1 { font-size: 1.5rem; margin-bottom: .25rem; }
+  h2 { font-size: 1rem; margin-top: 2rem; }
+  code { padding: .1rem .3rem; border-radius: 3px; background: #8882; }
+  .muted { opacity: .7; font-size: .9rem; }
+  ul { padding-left: 1.25rem; }
+</style>
+<h1>sold</h1>
+<p class="muted">中古相場の収集ボット</p>
+
+<p>フリマ・オークション各サイトの出品情報と成約価格を収集し、
+商品ごとの実勢価格帯を集計する個人運用のボットです。
+集計結果は仕入れ判断に使っています。</p>
+
+<h2>取得の作法</h2>
+<ul>
+  <li>robots.txt を遵守します（RFC 9309 の最長一致で判定）。</li>
+  <li>取得間隔はサイトごとに設定し、最短でも 2.5 秒以上空けます。</li>
+  <li>同時接続は 1 です。</li>
+  <li>ラクマは 20〜24 時の時間帯を避けます。</li>
+  <li>一覧ページを主対象とし、詳細ページは必要時のみ取得します。</li>
+</ul>
+
+<h2>取得対象</h2>
+<ul>
+  <li>メルカリ（検索 API）</li>
+  <li>ヤフオク（検索結果ページ）</li>
+  <li>ラクマ（検索結果ページ・楽天から書面許諾済み）</li>
+</ul>
+
+<h2>User-Agent</h2>
+<p><code>soldbot/0.1 (+https://ここにこのページのURL; 連絡先メール)</code></p>
+
+<h2>連絡先</h2>
+<p>取得頻度の調整、除外の依頼、不具合の連絡はこちらへ。</p>
+<p><code>contact@example.com</code></p>
+
+<h2>免責</h2>
+<p>価格は取得時点のもので、正確性は保証しません。
+各サイトの規約はそれぞれに帰属します。</p>
+
+<p class="muted">最終更新: 2026-11-01</p>
+</html>
